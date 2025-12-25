@@ -7,7 +7,7 @@ import './App.css'
 // This is a child component that uses props
 function Greeting(props) {
   // HIGHLIGHT: Using props to access the 'name' property
-  return <h2>Hello, {props.name}!</h2>;
+  return <h2>Hello, {props.name}!, age = {props.age}</h2>;
 }
 
 function App() {
@@ -26,6 +26,7 @@ function App() {
       <h1>Vite + React</h1>
       {/* HIGHLIGHT: Passing the 'name' prop to Greeting */}
       <Greeting name="Vimal" />
+      <Greeting age={20} />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
