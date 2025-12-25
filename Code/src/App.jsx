@@ -1,7 +1,14 @@
+
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+
+// This is a child component that uses props
+function Greeting(props) {
+  // HIGHLIGHT: Using props to access the 'name' property
+  return <h2>Hello, {props.name}!</h2>;
+}
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +24,8 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      {/* HIGHLIGHT: Passing the 'name' prop to Greeting */}
+      <Greeting name="Vimal" />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
